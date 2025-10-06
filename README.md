@@ -12,6 +12,7 @@ En general, las partes de una clase:
     - de instancia (usan this)
     - estáticos (static)
     - getters/setters (get, set).
+
 ## ¿Cómo se usan?
 Para usar clases en JavaScript, primero se define una plantilla de objeto con la palabra clave class, la cual contiene un método constructor para inicializar propiedades y otros métodos para definir el comportamiento. 
 
@@ -36,7 +37,8 @@ Después, creamos objetos a partir de esta clase usando new, y accedemos o modif
     }
     ```
 
-3. Agregar métodos: Los métodos son aquellos que definen el comportamiento de los objetos de dicha clase. Ejemplo:
+3. Agregar métodos: Los métodos son aquellos que definen el comportamiento de los objetos de dicha clase. 
+Ejemplo:
     ```js
     class Animal {
         constructor(nombre, sonido) {
@@ -52,15 +54,42 @@ Después, creamos objetos a partir de esta clase usando new, y accedemos o modif
 4. Crear instancias: Este apartado lo veremos en la siguiente sección
 
 ## ¿Cómo se crean instancias?
-Para crear un objeto a partir de una clase, usa la palabra clave new seguida del nombre de la clase y los argumentos para el constructor. Ejemplo:
+Una instancia es un objeto que se crea a partir de una clase. Para hacerlo, usamos la palabra clave new seguida del nombre de la clase y los argumentos para el constructor. 
+Ejemplo:
  ```js
     const miPato = new Animal("Pato Lucas", "Cuac cuac");
 
     const miRatón = new Animal("Jerry", "Chirrido");
 ```
+En general, cada que se ejecuta "new", se ejecuta el constructor de la clase (visto arriba) y se crea un nuevo objeto con sus propios valores.
 
 ## ¿Cómo se hacen métodos y funciones?
+Los métodos son funciones que se definen dentro de una clase y se usan para describir las acciones que las instancias pueden realizar. Los métodos se declaran sin la palabra clave function dentro de la clase.
+Ejemplo:
+```js
+class Coche {
+  constructor(marca, velocidad) {
+    this.marca = marca;
+    this.velocidad = velocidad;
+  }
 
+  acelerar() {
+    this.velocidad += 10;
+  }
+
+  frenar() {
+    this.velocidad -= 10;
+  }
+
+  mostrarVelocidad() {
+    console.log(`El coche ${this.marca} va a ${this.velocidad} km/h`);
+  }
+}
+
+const miCoche = new Coche("Toyota", 100);
+miCoche.acelerar();
+miCoche.mostrarVelocidad(); 
+```
 ## Investigación extra
 
 ### Campos privados, ¿Cuándo usarlos? 
