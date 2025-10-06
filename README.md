@@ -18,7 +18,7 @@ Para usar clases en JavaScript, primero se define una plantilla de objeto con la
 Después, creamos objetos a partir de esta clase usando new, y accedemos o modificamos sus propiedades y métodos utilizando "this" dentro de la clase y el nombre del objeto fuera de ella [1]. 
 
 1. Declarar la clase: Utiliza la palabra clave class seguida del nombre de la clase, que suele empezar con mayúscula, y encierra el contenido entre llaves {}. A continuación, se presenta un ejemplo: 
-
+```js
     // Declaración de una clase
 
     class Animal {}
@@ -26,30 +26,40 @@ Después, creamos objetos a partir de esta clase usando new, y accedemos o modif
     // Instanciamos un objeto
 
     const pato = new Animal();
-
+```
 2. Definir el constructor: 
+```js
+    class Animal {
+
+        constructor(nombre, sonido) {
+            this.nombre = nombre;
+            this.sonido = sonido;
+        }
+    }
+```
 
 3. Agregar métodos: Los métodos son aquellos que definen el comportamiento de los objetos de dicha clase. Ejemplo:
-
+    ```js
     class Animal {
         constructor(nombre, sonido) {
             this.nombre = nombre;
             this.sonido = sonido;
         }
-
         hablar() {
             return `${this.nombre} dice: ${this.sonido}`;
         }
     }
+    ```
 
 4. Crear instancias: Este apartado lo veremos en la siguiente sección
 
 ## ¿Cómo se crean instancias?
 Para crear un objeto a partir de una clase, usa la palabra clave new seguida del nombre de la clase y los argumentos para el constructor. Ejemplo:
-
+    ```js
     const miPato = new Animal("Pato Lucas", "Cuac cuac");
 
     const miRatón = new Animal("Jerry", "Chirrido");
+    ```
 
 ## ¿Cómo se hacen métodos y funciones?
 
