@@ -1,6 +1,6 @@
 # Clases en JavaScript
 ### Mariela Mejía Gutiérrez - 201373
-En este repositorio se encuentra la tarea sobre investigación de las distintas clases de JavaScript. Específicamente, el ReadMe contiene la información previa a la creación de clases (con sus distintas funciones) para su entendimiento completo y correcto.
+En este repositorio se encuentra la tarea de investigación sobre las clases en JavaScript. Específicamente, el ReadMe contiene la información previa a la creación de clases (con sus distintas funciones) para su entendimiento completo y correcto.
 
 ## ¿Qué son las clases en JavaScript?
 Una clase es una forma de organizar código de manera entendible y estructurada con el objetivo de simplificar el funcionamiento del programa que deseamos hacer. Las clases son conceptos "abstractos" de lo que se pueden crear objetos, cada uno con sus propios atributos [1].
