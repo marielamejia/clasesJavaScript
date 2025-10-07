@@ -180,6 +180,13 @@ Tanto las clases como las funciones constructoras sirven como plantillas para po
   </tbody>
 </table>
 
+## Ejercicio práctico
+Para esta tarea, se utilizaron las siguientes clases: 
+- Persona.js
+- CuentaBancaria.js
+- Producto.js
+- main.js --> aquí hacemos las pruebas para ver el correcto funcionamiento de las clases
+
 ## Referencias
 La información anterior fue tomada de las siguientes ligas 
 
