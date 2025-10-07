@@ -186,6 +186,7 @@ Para esta tarea, se utilizaron las siguientes clases:
 - CuentaBancaria.js
 - Producto.js
 - main.js --> aquí hacemos las pruebas para ver el correcto funcionamiento de las clases
+- index.html --> usamos esta clase para correr nuestro main y ver los resultados en la consola
 
 ## Referencias
 La información anterior fue tomada de las siguientes ligas 
