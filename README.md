@@ -90,17 +90,101 @@ const miCoche = new Coche("Toyota", 100);
 miCoche.acelerar();
 miCoche.mostrarVelocidad(); 
 ```
+
 ## Investigación extra
 
 ### Campos privados, ¿Cuándo usarlos? 
+Los campos privados se declaran con un símbolo # y solo se pueden acceder desde dentro de la clase. Sirven para proteger datos sensibles o internos y evitar que otros accedan o modifiquen información directamente.
+
+Los usamos cuando:
+- Quieres encapsular la información y controlar cómo se accede o modifica.
+- Deseas mantener la integridad de los datos, como una contraseña.
+- Buscas evitar errores por accesos externos no controlados.
+
+Ejemplo: 
+```js
+class CuentaBancaria {
+  #saldo;
+
+  constructor(titular, saldoInicial) {
+    this.titular = titular;
+    this.#saldo = saldoInicial;
+  }
+
+  depositar(monto) {
+    this.#saldo += monto;
+  }
+
+  verSaldo() {
+    console.log(`Saldo: $${this.#saldo}`);
+  }
+}
+
+const cuenta = new CuentaBancaria("Mariela", 1000);
+cuenta.depositar(500);
+cuenta.verSaldo(); 
+console.log(cuenta.#saldo); 
+```
+Tomando el ejemplo anterior, se declaró "saldo" como un campo privado. Por ello, se manda un error al tratar de acceder a el por medio del comando: 
+```js
+console.log (cuenta.#saldo); 
+```
 
 ### Clases vs. funciones constructoras 
+Tanto las clases como las funciones constructoras sirven como plantillas para poder crear objetos. En la siguiente tabla, se presentan las mayores diferencias de ambas. 
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspecto</th>
+      <th>Clases (ES6)</th>
+      <th>Funciones constructoras (pre-ES6)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Sintaxis</b></td>
+      <td>Usa la palabra clave <code>class</code> y el método especial <code>constructor()</code>.</td>
+      <td>Usa una función normal que se invoca con <code>new</code>.</td>
+    </tr>
+    <tr>
+      <td><b>Claridad</b></td>
+      <td>Más clara, estructurada y similar a otros lenguajes orientados a objetos.</td>
+      <td>Más técnica y menos intuitiva para principiantes.</td>
+    </tr>
+    <tr>
+      <td><b>Definición de métodos</b></td>
+      <td>Los métodos se declaran dentro de la clase sin la palabra <code>function</code>.</td>
+      <td>Los métodos deben agregarse manualmente al <code>prototype</code>.</td>
+    </tr>
+    <tr>
+      <td><b>Herencia</b></td>
+      <td>Se usa <code>extends</code> y <code>super()</code> para heredar propiedades y métodos.</td>
+      <td>Se usa <code>Object.create()</code> o <code>call()</code> para simular herencia.</td>
+    </tr>
+    <tr>
+      <td><b>Campos privados</b></td>
+      <td>Permiten usar <code>#</code> para definir atributos privados.</td>
+      <td>No tienen soporte directo para atributos privados.</td>
+    </tr>
+    <tr>
+      <td><b>Compatibilidad</b></td>
+      <td>Disponible desde ES6 (2015) en adelante.</td>
+      <td>Funciona en versiones más antiguas de JavaScript.</td>
+    </tr>
+    <tr>
+      <td><b>Recomendación actual</b></td>
+      <td>Recomendada por su legibilidad y soporte moderno.</td>
+      <td>Obsoleta, solo útil para compatibilidad con código antiguo.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Referencias
 La información anterior fue tomada de las siguientes ligas 
 
 [1] https://lenguajejs.com/javascript/oop/clases
 
-[2]
+[2] https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes 
 
-[3]
+[3] https://www-w3schools-com.translate.goog/js/js_classes.asp?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
