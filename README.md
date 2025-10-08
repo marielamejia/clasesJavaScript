@@ -3,7 +3,7 @@
 En este repositorio se encuentra la tarea de investigación sobre las clases en JavaScript. Específicamente, el ReadMe contiene la información previa a la creación de clases (con sus distintas funciones) para su entendimiento completo y correcto.
 
 ## ¿Qué son las clases en JavaScript?
-Una clase es una forma de organizar código de manera entendible y estructurada con el objetivo de simplificar el funcionamiento del programa que deseamos hacer. Las clases son conceptos "abstractos" de lo que se pueden crear objetos, cada uno con sus propios atributos [1].
+Una clase es una forma de organizar código de manera entendible y estructurada con el objetivo de simplificar el funcionamiento del programa que deseamos hacer. Las clases son conceptos "abstractos" de lo que se pueden crear objetos, cada uno con sus propios atributos.
 En general, las clases son un modelo para crear objetos que definen las propiedades (datos) y métodos (funciones) que tendrán los objetos creados a partir de ella.
 En general, las partes de una clase:
 - constructor(...): inicializa atributos al crear una instancia con new.
@@ -189,10 +189,8 @@ Para esta tarea, se utilizaron las siguientes clases:
 - index.html --> usamos esta clase para correr nuestro main y ver los resultados en la consola
 
 ## Referencias
-La información anterior fue tomada de las siguientes ligas 
+https://lenguajejs.com/javascript/oop/clases
 
-[1] https://lenguajejs.com/javascript/oop/clases
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes 
 
-[2] https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes 
-
-[3] https://www-w3schools-com.translate.goog/js/js_classes.asp?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+https://www-w3schools-com.translate.goog/js/js_classes.asp?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
